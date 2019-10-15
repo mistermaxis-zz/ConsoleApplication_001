@@ -2,19 +2,24 @@
 //
 
 #include <iostream>
+#include <functional>
 #include <string>
-#include <typeinfo>
+#include "ConsoleApplication_001.h"
+
+class trick {
+public:
+	int& multiply(int&& b, const int&& c) { b *= c; return b; }
+};
 
 int main()
 {
-	std::string h = "What's up?";
-	std::string o = "Nothing";
-	std::string s = h + " " + o;
-	int x = 20;
-	int y = 30;
-	int xy = x + y;
-	
-    std::cout << s << "\n";
+	trick t;
+	int x = 4;
+	int &a = t.multiply(std::move(x), 8);
+	a += 3;
+	x += 10;
+	std::cout << &a << " " << &x;
+	return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
