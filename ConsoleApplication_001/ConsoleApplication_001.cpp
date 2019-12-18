@@ -66,8 +66,8 @@ int main()
 {
 	long double height_input;
 	char gender_input;
-	std::cout << "Enter you height in meters (eg: 1.45) and gender to receive your ideal weight.\n";
-	std::cout << "Enter your height:\n";
+	std::cout << "Enter you height in meters and gender to receive your ideal weight.\n";
+	std::cout << "Enter your height (eg: 1.45):\n";
 	std::cin >> height_input;
 	std::cout << "Enter you gender (f for female and m for male):\n";
 	std::cin >> gender_input;
